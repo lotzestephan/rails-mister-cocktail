@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="d-flex">
+    <%= simple_form_for [@cocktail, @dose] do |f| -%>
+    <h1>Add new ingredients to <%= @cocktail.name %> </h1>
+      <%= f.input :description, placeholder:"Describe ingredient" %>
+      <%= f.association :ingredient, as: :select %>
+      <%= f.button :submit, class:"btn btn-primary btn-block" %>
+      <%= link_to "Back to #{@cocktail.name}", root_path, class:"btn btn-primary btn-block" %>
+    <% end -%>
+  </div>
+</div>

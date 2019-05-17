@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="d-flex">
+    <%= simple_form_for @cocktail do |f| -%>
+      <%= f.input :name, placeholder:"Cocktail name" %>
+      <%= f.button :submit, class:"btn btn-primary btn-block" %>
+      <%= link_to "Back to cocktails", root_path, class:"btn btn-primary btn-block" %>
+    <% end -%>
+  </div>
+</div>
