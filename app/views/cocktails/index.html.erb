@@ -1,11 +1,47 @@
-<div class="container">
-  <h1 class="mt-3">Cocktails</h1>
-  <ul class="list-unstyled">
-    <% @cocktails.each do |cocktail| %>
-      <li>
-        <%= link_to cocktail.name, cocktail_path(cocktail) %>
-      </li>
-    <% end %>
-  </ul>
-  <%= link_to "Add a new cocktail", new_cocktail_path, class:"btn btn-primary mt-3 mb-5" %>
+<!--  <div class="bg">
+  <div class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <*%= image_tag "alcohol-alcoholic-beverage-cocktail-2260281.jpg", alt:"First slide" %>
+      </div>
+      <div class="carousel-item">
+        <*%= image_tag "alcohol-beverage-blur-616836.jpg", alt:"First slide" %>
+      </div>
+      <div class="carousel-item">
+        <*%= image_tag "bar-beverage-cocktail-109275.jpg", alt:"First slide" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+ -->
+
+<div class="banner">
+  <div class="background-index">
+    <div class="container">
+      <div class="headline-coverpage-1">
+        <h1>
+          Check out the most fancy cocktails
+        </h1>
+        <p>
+          Easily review existing recipes and add new cocktail ideas!
+        </p>
+        <%= link_to "Add a new cocktail", new_cocktail_path, class:"btn btn-primary mt-3 mb-5" %>
+      </div>
+    </div>
+  </div>
+  <div class="container mt-3">
+    <ul class="list-unstyled">
+      <div class="d-flex cocktail-parent">
+        <% @cocktails.each do |cocktail| %>
+          <div class="col-lg-3 cocktails-card">
+            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+            <div class="cocktail-text">
+              <%= cocktail.name %>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </ul>
+  </div>
 </div>

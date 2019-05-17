@@ -1,0 +1,17 @@
+.cocktails-card {
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: grey;
+  border-style: solid;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  margin-right: 2px;
+  margin-left: 2px;
+  position: relative;
+}
+
+.cocktail-text {
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+}

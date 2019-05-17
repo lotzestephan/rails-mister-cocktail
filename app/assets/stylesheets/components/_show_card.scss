@@ -1,0 +1,65 @@
+.show-headline h1 {
+  font-size: 30px;
+  padding-top: 10px;
+  padding-left: 10px;
+  text-align: center;
+  font-family: 'Proza Libre', sans-serif;
+  font-weight: bold;
+}
+
+.background-cocktail-show {
+  background-image: asset-url("alcohol-alcoholic-beverage-blurry-162571.jpg");
+  background-size: cover;
+}
+
+.cocktail-card-show {
+  background-color: white;
+  padding: 5px;
+  border-color: lightgrey;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.show-content {
+  padding-top: 30px;
+}
+
+.fuckoffcss p {
+  text-align: center;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.delete-btn {
+  position: absolute;
+  bottom: 7px;
+  right: 10px;
+  font-size: 30px;
+}
+
+.ingredients-card {
+  box-shadow: 0px 0px 5px lightgrey;
+  padding: 5px;
+}
+
+.ingredients {
+  padding-left: 5px;
+}
+
+.ingredients h1 {
+  font-family: 'Proza Libre', sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.ingredients p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+

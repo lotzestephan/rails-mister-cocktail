@@ -1,0 +1,39 @@
+.background-index {
+  /* The image used */
+  background-image: asset-url("alcohol-beverage-blur-616836.jpg");
+  /* Half height */
+  height: 100vh;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.background-new {
+  /* The image used */
+  background-image: asset-url("alcohol-alcoholic-beverage-bar-162475.jpg");
+  /* Half height */
+  /* Center and scale the image nicely */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.headline-coverpage-1 {
+  padding-top: 400px;
+}
+
+.headline-coverpage-1 h1 {
+  font-size: 25px;
+  font-family: 'Proza Libre', sans-serif;
+  font-weight: bold;
+  color: white;
+}
+
+.headline-coverpage-1 p {
+  padding-top: 10px;
+  font-size: 20px;
+  font-family: 'Open Sans', sans-serif;
+  color: white;
+  font-style: italic;
+}
+

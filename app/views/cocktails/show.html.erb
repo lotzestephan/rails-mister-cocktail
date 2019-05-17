@@ -1,16 +1,44 @@
-<div class="container">
-  <h1><%= @cocktail.name %></h1>
-  <% @cocktail.doses.each do |dose| %>
-    <p><% ingredient = @ingredients.find { |ingredient| ingredient.id == dose.ingredient_id } %></p>
-    <p><%= ingredient.name %></p>
-    <p><%= dose.description %></p>
-    <p><%= dose.id %></p>
-    <p><%= @cocktail.id %></p>
-    <%= link_to "Delete this ingredient", dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %>
-  <% end %>
-  <%= link_to "Back to cocktails", root_path %>
-  <%= link_to "Edit this cocktail", edit_cocktail_path(@cocktail) %>
-  <%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail) %>
-  <%= link_to "Remove this cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' } %>
+<div class="container mt-3">
+  <div class="cocktail-card-show d-flex">
+    <div class="col-lg-6">
+      <div class="show-headline">
+        <h1><i class="fas fa-cocktail"></i>   <%= @cocktail.name %></h1>
+      </div>
+      <div class="show-content">
+        <div class="fuckoffcss">
+          <p>Ingredients</p>
+        </div>
+        <% @cocktail.doses.each do |dose| %>
+          <div class="d-flex position-relative ingredients-card">
+            <div class="ingredients">
+              <% ingredient = @ingredients.find { |ingredient| ingredient.id == dose.ingredient_id } %>
+              <h1>
+                <%= ingredient.name %>
+              </h1>
+              <p>
+                <%= dose.description %>
+              </p>
+            </div>
+            <div class="delete-btn">
+              <%= link_to dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fas fa-trash-alt"></i>
+                <% end %>
+            </div>
+          </div>
+        <% end %>
+        <br>
+        <%= link_to "Add ingredients", new_cocktail_dose_path(@cocktail), class:"btn btn-primary btn-block" %>
+        <br>
+        <br>
+        <br>
+        <%= link_to "Edit this cocktail", edit_cocktail_path(@cocktail), class:"btn btn-secondary btn-block" %>
+        <%= link_to "Remove this cocktail", cocktail_path(@cocktail), method: :delete, data: { confirm: 'Are you sure?' }, class:"btn btn-secondary btn-block" %>
+        <%= link_to "Back to cocktails", root_path, class:"btn btn-secondary btn-block" %>
+      </div>
+    </div>
+    <div class="col-lg-6 background-cocktail-show">
+      <p>blabla</p>
+    </div>
+  </div>
 </div>
 
