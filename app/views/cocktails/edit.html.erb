@@ -3,7 +3,10 @@
     <%= simple_form_for @cocktail do |f| -%>
       <%= f.input :name, placeholder:"Cocktail name" %>
       <%= f.button :submit, class:"btn btn-primary btn-block" %>
-      <%= link_to "Back to cocktails", root_path, class:"btn btn-primary btn-block" %>
+      <br>
+      <br>
+      <%= link_to "Back to #{@cocktail.name}", @cocktail, class:"btn btn-secondary btn-block" %>
+      <%= link_to "Back to all cocktails", root_path, class:"btn btn-secondary btn-block" %>
     <% end -%>
   </div>
 </div>
