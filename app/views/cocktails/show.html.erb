@@ -36,7 +36,8 @@
         <%= link_to "Back to cocktails", root_path, class:"btn btn-secondary btn-block" %>
       </div>
     </div>
-    <div class="col-lg-6 background-cocktail-show">
+    <div class="col-lg-6 pr-0">
+      <%= image_tag "#{@cocktail.url}", class:"cocktail-img" %>
     </div>
   </div>
 </div>

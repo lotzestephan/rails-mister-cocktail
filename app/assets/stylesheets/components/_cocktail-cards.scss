@@ -3,8 +3,8 @@
   border-width: 1px;
   border-color: grey;
   border-style: solid;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-left: 0px;
+  padding-right: 0px;
   margin-right: 2px;
   margin-left: 2px;
   position: relative;
@@ -14,4 +14,15 @@
   position: absolute;
   bottom: 5px;
   right: 10px;
+  padding-right: 5px;
+  padding-left: 5px;
+  background-color: rgba(255,255,255,0.7);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.cocktail-img {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
 }

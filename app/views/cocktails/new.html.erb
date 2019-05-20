@@ -5,13 +5,13 @@
         Which cocktail would you like to add?
       </h1>
       <%= simple_form_for @cocktail do |f| -%>
-        <%= f.input :name, placeholder:"Cocktail name" %>
+        <%= f.input :name, placeholder:"Enter cocktail name" %>
+        <%= f.input :url, placeholder:"Enter image url" %>
         <%= f.button :submit, class:"btn btn-primary btn-block" %>
-        <%= link_to "Back to cocktails", root_path, class:"btn btn-primary btn-block" %>
+        <%= link_to "Back to cocktails", root_path, class:"btn btn-secondary btn-block" %>
       <% end -%>
     </div>
     <div class="background-new col-lg-7">
-
     </div>
   </div>
 </div>

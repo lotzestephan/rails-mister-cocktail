@@ -34,8 +34,12 @@
     <ul class="list-unstyled">
       <div class="d-flex cocktail-parent">
         <% @cocktails.each do |cocktail| %>
-          <div class="col-lg-3 cocktails-card">
-            <%= link_to cocktail.name, cocktail_path(cocktail) %>
+          <div class="col-lg-2 cocktails-card">
+            <div class="cocktail-img">
+              <%= link_to cocktail do %>
+               <%= image_tag "#{cocktail.url}", class:"cocktail-img" %>
+               <% end %>
+            </div>
             <div class="cocktail-text">
               <%= cocktail.name %>
             </div>
@@ -44,4 +48,5 @@
       </div>
     </ul>
   </div>
+  <br>
 </div>

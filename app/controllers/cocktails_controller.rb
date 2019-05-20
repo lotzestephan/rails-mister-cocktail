@@ -14,7 +14,7 @@ class CocktailsController < ApplicationController
   end
 
   def create
-    @cocktail = Cocktail.new(name: cocktail_params[:name])
+    @cocktail = Cocktail.new(name: cocktail_params[:name], url: cocktail_params[:url])
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
@@ -28,8 +28,8 @@ class CocktailsController < ApplicationController
 
   def update
     @cocktail = Cocktail.find(params[:id])
-    if @cocktail.update(name: cocktail_params[:name])
-      redirect_to root_path
+    if @cocktail.update(name: cocktail_params[:name], url: cocktail_params[:url])
+      redirect_to @cocktail
     else
       render :edit
     end
@@ -44,6 +44,6 @@ class CocktailsController < ApplicationController
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name)
+    params.require(:cocktail).permit(:name, :url)
   end
 end

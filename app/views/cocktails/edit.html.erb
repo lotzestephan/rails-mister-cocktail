@@ -2,6 +2,7 @@
   <div class="d-flex">
     <%= simple_form_for @cocktail do |f| -%>
       <%= f.input :name, placeholder:"Cocktail name" %>
+      <%= f.input :url, placeholder:"Image url" %>
       <%= f.button :submit, class:"btn btn-primary btn-block" %>
       <br>
       <br>
